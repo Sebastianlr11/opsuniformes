@@ -1,0 +1,105 @@
+---
+// src/pages/services.astro
+import Layout from '../layouts/Layout.astro';
+import servicesData from '../data/services.json'; // Importa el archivo JSON
+
+---
+
+<Layout>
+  <!-- Introducción a los servicios -->
+  <section class="relative py-20 bg-gray-900">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-8 text-center bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text text-transparent animate-fade-in-down">
+        Nuestros Servicios
+      </h2>
+      <p class="text-gray-300 text-lg text-center max-w-2xl mx-auto">
+        Ofrecemos una amplia gama de servicios especializados en la fabricación y personalización de uniformes y productos deportivos. Descubre cómo podemos ayudarte a destacar.
+      </p>
+    </div>
+  </section>
+
+  <!-- Sección detallada por servicio -->
+  <section class="py-20 bg-gray-800">
+    <div class="container mx-auto px-6">
+      {servicesData.map((service, index) => (
+        <div class={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} items-center gap-12 mb-20`}>
+          <!-- Imagen del servicio -->
+          <div class="w-full md:w-1/2">
+            <img
+              src={service.image}
+              alt={service.title}
+              class="w-full h-96 object-cover rounded-lg shadow-xl"
+            />
+          </div>
+
+          <!-- Contenido del servicio -->
+          <div class="w-full md:w-1/2">
+            <h3 class="text-3xl font-bold text-white mb-6">{service.title}</h3>
+            <p class="text-gray-300 mb-6">{service.description}</p>
+            <ul class="text-gray-300 mb-6">
+              <li class="flex items-center mb-2">
+                <svg class="w-5 h-5 text-red-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                Materiales de alta calidad.
+              </li>
+              <li class="flex items-center mb-2">
+                <svg class="w-5 h-5 text-red-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                Diseños personalizados.
+              </li>
+              <li class="flex items-center mb-2">
+                <svg class="w-5 h-5 text-red-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                Entrega rápida y confiable.
+              </li>
+            </ul>
+            <a
+              href="/contacto"
+              class="inline-block bg-gradient-to-r from-red-500 to-orange-500 text-white px-6 py-3 rounded-lg hover:from-red-600 hover:to-orange-600 transition-all duration-300"
+            >
+              Más información
+            </a>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Llamado a la acción final -->
+  <section class="relative py-20 bg-gray-900">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-8 bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text text-transparent animate-fade-in-down">
+        ¿Listo para comenzar?
+      </h2>
+      <p class="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">
+        Contáctanos hoy mismo para obtener más información sobre nuestros servicios y cómo podemos ayudarte a alcanzar tus objetivos.
+      </p>
+      <a
+        href="/contacto"
+        class="inline-block bg-gradient-to-r from-red-500 to-orange-500 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-red-600 hover:to-orange-600 transition-all duration-300"
+      >
+        Contactar ahora
+      </a>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  @keyframes fade-in-down {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in-down {
+    animation: fade-in-down 1s ease-out forwards;
+  }
+</style>
