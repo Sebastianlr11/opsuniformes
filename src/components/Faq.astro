@@ -1,24 +1,24 @@
 ---
-// Sección de Preguntas Frecuentes (FAQ)
+// src/components/FAQ.astro
 ---
 
-<section class="py-20 bg-transparent">
+<section class="relative py-24 bg-transparent overflow-hidden">
     <div class="container mx-auto px-6">
-      <h2 class="text-4xl font-bold text-gray-800 mb-12 text-center">
+      <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-16 text-center bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text text-transparent animate-fade-in-down">
         Preguntas Frecuentes
       </h2>
       <div class="max-w-3xl mx-auto">
         <!-- Pregunta 1 -->
-        <div class="bg-white p-6 rounded-lg shadow-md mb-4">
+        <div class="group bg-gradient-to-br from-gray-900/95 to-red-600/95 p-6 rounded-xl shadow-lg mb-6 border border-gray-700/30 transition-all duration-300 hover:shadow-xl">
           <button class="w-full flex justify-between items-center text-left focus:outline-none">
-            <h3 class="text-xl font-bold text-gray-800">
+            <h3 class="text-xl font-semibold text-white">
               ¿Qué materiales utilizan para los uniformes?
             </h3>
-            <svg class="h-6 w-6 text-red-500 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="h-6 w-6 text-white transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
             </svg>
           </button>
-          <div class="mt-4 text-gray-600">
+          <div class="faq-content mt-4 text-gray-200 max-h-0 overflow-hidden transition-all duration-300">
             <p>
               Utilizamos materiales de alta calidad, como poliéster transpirable y resistente, que garantizan comodidad y durabilidad. También ofrecemos opciones personalizadas según las necesidades de tu equipo.
             </p>
@@ -26,16 +26,16 @@
         </div>
   
         <!-- Pregunta 2 -->
-        <div class="bg-white p-6 rounded-lg shadow-md mb-4">
+        <div class="group bg-gradient-to-br from-gray-900/95 to-red-600/95 p-6 rounded-xl shadow-lg mb-6 border border-gray-700/30 transition-all duration-300 hover:shadow-xl">
           <button class="w-full flex justify-between items-center text-left focus:outline-none">
-            <h3 class="text-xl font-bold text-gray-800">
+            <h3 class="text-xl font-semibold text-white">
               ¿Cuánto tiempo toma la fabricación de los uniformes?
             </h3>
-            <svg class="h-6 w-6 text-red-500 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="h-6 w-6 text-white transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
             </svg>
           </button>
-          <div class="mt-4 text-gray-600">
+          <div class="faq-content mt-4 text-gray-200 max-h-0 overflow-hidden transition-all duration-300">
             <p>
               El tiempo de fabricación depende del diseño y la cantidad de uniformes. En general, el proceso toma entre 2 y 4 semanas. Para pedidos urgentes, contáctanos y haremos lo posible por cumplir con tus plazos.
             </p>
@@ -43,16 +43,16 @@
         </div>
   
         <!-- Pregunta 3 -->
-        <div class="bg-white p-6 rounded-lg shadow-md mb-4">
+        <div class="group bg-gradient-to-br from-gray-900/95 to-red-600/95 p-6 rounded-xl shadow-lg mb-6 border border-gray-700/30 transition-all duration-300 hover:shadow-xl">
           <button class="w-full flex justify-between items-center text-left focus:outline-none">
-            <h3 class="text-xl font-bold text-gray-800">
+            <h3 class="text-xl font-semibold text-white">
               ¿Ofrecen diseños personalizados?
             </h3>
-            <svg class="h-6 w-6 text-red-500 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="h-6 w-6 text-white transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
             </svg>
           </button>
-          <div class="mt-4 text-gray-600">
+          <div class="faq-content mt-4 text-gray-200 max-h-0 overflow-hidden transition-all duration-300">
             <p>
               ¡Sí! Trabajamos contigo para crear diseños únicos que representen la identidad de tu equipo. Puedes enviarnos tus ideas o trabajar con nuestro equipo de diseño para crear algo desde cero.
             </p>
@@ -60,16 +60,16 @@
         </div>
   
         <!-- Pregunta 4 -->
-        <div class="bg-white p-6 rounded-lg shadow-md mb-4">
+        <div class="group bg-gradient-to-br from-gray-900/95 to-red-600/95 p-6 rounded-xl shadow-lg mb-6 border border-gray-700/30 transition-all duration-300 hover:shadow-xl">
           <button class="w-full flex justify-between items-center text-left focus:outline-none">
-            <h3 class="text-xl font-bold text-gray-800">
+            <h3 class="text-xl font-semibold text-white">
               ¿Hacen envíos a todo el país?
             </h3>
-            <svg class="h-6 w-6 text-red-500 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="h-6 w-6 text-white transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
             </svg>
           </button>
-          <div class="mt-4 text-gray-600">
+          <div class="faq-content mt-4 text-gray-200 max-h-0 overflow-hidden transition-all duration-300">
             <p>
               Sí, realizamos envíos a todo el país. Los costos y tiempos de entrega varían según la ubicación. Contáctanos para más detalles sobre envíos internacionales.
             </p>
@@ -77,16 +77,16 @@
         </div>
   
         <!-- Pregunta 5 -->
-        <div class="bg-white p-6 rounded-lg shadow-md mb-4">
+        <div class="group bg-gradient-to-br from-gray-900/95 to-red-600/95 p-6 rounded-xl shadow-lg mb-6 border border-gray-700/30 transition-all duration-300 hover:shadow-xl">
           <button class="w-full flex justify-between items-center text-left focus:outline-none">
-            <h3 class="text-xl font-bold text-gray-800">
+            <h3 class="text-xl font-semibold text-white">
               ¿Qué métodos de pago aceptan?
             </h3>
-            <svg class="h-6 w-6 text-red-500 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="h-6 w-6 text-white transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
             </svg>
           </button>
-          <div class="mt-4 text-gray-600">
+          <div class="faq-content mt-4 text-gray-200 max-h-0 overflow-hidden transition-all duration-300">
             <p>
               Aceptamos pagos con tarjeta de crédito, transferencias bancarias y PayPal. También ofrecemos opciones de pago en cuotas para pedidos grandes.
             </p>
@@ -95,3 +95,57 @@
       </div>
     </div>
   </section>
+  
+  <style>
+    @keyframes fade-in-down {
+      0% {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  
+    .animate-fade-in-down {
+      animation: fade-in-down 1s ease-out forwards;
+    }
+  
+    .faq-content {
+      transition: max-height 0.3s ease-out;
+    }
+  
+    .group:hover .faq-content {
+      /* No altera el hover del acordeón, solo la sombra y el borde */
+    }
+  </style>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.faq-item button').forEach(button => {
+        button.addEventListener('click', () => {
+          const faqItem = button.parentElement;
+          const content = faqItem.querySelector('.faq-content');
+          const icon = button.querySelector('svg');
+  
+          // Cerrar otros acordeones abiertos
+          document.querySelectorAll('.faq-content').forEach(otherContent => {
+            if (otherContent !== content && otherContent.style.maxHeight) {
+              otherContent.style.maxHeight = null;
+              otherContent.parentElement.querySelector('svg').classList.remove('rotate-180');
+            }
+          });
+  
+          // Alternar el acordeón actual
+          if (content.style.maxHeight && content.style.maxHeight !== '0px') {
+            content.style.maxHeight = null;
+            icon.classList.remove('rotate-180');
+          } else {
+            content.style.maxHeight = content.scrollHeight + 'px';
+            icon.classList.add('rotate-180');
+          }
+        });
+      });
+    });
+  </script>

@@ -2,25 +2,109 @@
 // src/components/Contact.astro
 ---
 
-<section class="relative py-20 overflow-hidden">
-    <div class="container mx-auto px-6">
-      <h2 class="text-4xl font-bold text-white mb-12 text-center">
-        Contáctanos
-      </h2>
-      <div class="grid grid-cols-1 md:grid-cols-1 gap-8">
-        
-  
-        <!-- Mapa de Google -->
-        <div class="rounded-lg overflow-hidden shadow-lg">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.123456789012!2d-74.123456!3d4.612345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNMKwMzYnNDQuNSJOIDc0wrAwNyczNi4xIlc!5e0!3m2!1ses!2sco!4v1630000000000!5m2!1ses!2sco"
-            width="100%"
-            height="400"
-            style="border:0;"
-            allowfullscreen=""
-            loading="lazy"
-          ></iframe>
+<section class="relative py-24 bg-transparent overflow-hidden">
+  <div class="container mx-auto px-6">
+    <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-16 text-center bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text text-transparent animate-fade-in-down">
+      Contáctanos
+    </h2>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <!-- Mapa de Google -->
+      <div class="rounded-xl overflow-hidden shadow-xl">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.123456789012!2d-74.123456!3d4.612345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNMKwMzYnNDQuNSJOIDc0wrAwNyczNi4xIlc!5e0!3m2!1ses!2sco!4v1630000000000!5m2!1ses!2sco"
+          width="100%"
+          height="450"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+        ></iframe>
+      </div>
+
+      <!-- Botones de contacto -->
+      <div class="text-center lg:text-left space-y-8">
+        <!-- Botón WhatsApp -->
+        <div class="relative">
+          <button
+            class="w-full max-w-sm bg-gradient-to-r from-green-500 to-green-600 text-white px-8 py-4 rounded-full font-semibold text-lg flex items-center justify-center gap-3 hover:from-green-600 hover:to-green-700 transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
+            data-contact="whatsapp"
+            data-value="+573001234567"
+          >
+            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.149-.198.297-.767.966-.94 1.164-.174.198-.347.223-.522.074-.174-.149-.672-.57-.947-.741-.274-.172-.441-.652-.421-.976.021-.324.312-.648.66-.897.348-.25.607-.426.986-.426.378 0 .706.026.806.074.099.049.623.297.917.693.293.396.395.842.297 1.316-.099.473-.446.892-.743 1.04zm-5.252 4.057c-3.36 0-6.085-2.724-6.085-6.084 0-1.62.636-3.14 1.79-4.278A5.99 5.99 0 0112 6c1.62 0 3.14.636 4.278 1.79A5.99 5.99 0 0118 12c0 3.36-2.724 6.084-6.084 6.084zm0-16.84C7.31 1.6 3.6 5.31 3.6 10.22c0 1.96.79 3.74 2.06 5.03L2 22l6.92-3.54c1.25.47 2.61.74 4.02.74 4.91 0 8.62-3.71 8.62-8.62 0-4.91-3.71-8.62-8.62-8.62z"/>
+            </svg>
+            Contáctanos por WhatsApp
+          </button>
+          <span class="copy-notif absolute top-[-40px] left-1/2 transform -translate-x-1/2 bg-gray-800 text-white px-4 py-2 rounded-lg text-sm opacity-0 transition-opacity duration-300">
+            ¡Número copiado!
+          </span>
+        </div>
+
+        <!-- Botón Correo -->
+        <div class="relative">
+          <button
+            class="w-full max-w-sm bg-gradient-to-r from-red-500 to-orange-500 text-white px-8 py-4 rounded-full font-semibold text-lg flex items-center justify-center gap-3 hover:from-blue-600 hover:to-indigo-600 transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
+            data-contact="email"
+            data-value="contacto@opsuniformes.com"
+          >
+            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l9-6 9 6v12a2 2 0 01-2 2H5a2 2 0 01-2-2V8z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l9 6 9-6" />
+            </svg>
+            Envíanos un Correo
+          </button>
+          <span class="copy-notif absolute top-[-40px] left-1/2 transform -translate-x-1/2 bg-gray-800 text-white px-4 py-2 rounded-lg text-sm opacity-0 transition-opacity duration-300">
+            ¡Correo copiado!
+          </span>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
+<style>
+  @keyframes fade-in-down {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in-down {
+    animation: fade-in-down 1s ease-out forwards;
+  }
+
+  .copy-notif.active {
+    opacity: 1;
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('[data-contact]').forEach(button => {
+      button.addEventListener('click', () => {
+        const value = button.getAttribute('data-value');
+        const notif = button.nextElementSibling;
+
+        // Copiar al portapapeles
+        navigator.clipboard.writeText(value).then(() => {
+          // Mostrar notificación
+          notif.classList.add('active');
+          
+          // Ocultar después de 2 segundos
+          setTimeout(() => {
+            notif.classList.remove('active');
+          }, 2000);
+        });
+        
+        // Abrir WhatsApp si es el botón correspondiente
+        if (button.getAttribute('data-contact') === 'whatsapp') {
+          window.open(`https://wa.me/${value}`, '_blank');
+        }
+      });
+    });
+  });
+</script>

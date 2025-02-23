@@ -1,90 +1,107 @@
 ---
-// Sección de Servicios con diseño premium
+// src/components/Services.astro
 ---
 
-<section class="relative py-20 overflow-hidden">
-    <div class="container mx-auto px-6">
-      <h2 class="text-4xl font-bold text-white mb-12 text-center">
-        Nuestros Servicios
-      </h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <!-- Servicio 1: Fabricación de Uniformes -->
-        <div class="bg-gradient-to-br from-gray-900 to-red-500 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 transform border border-gray-200">
-          <div class="text-white mb-4">
-            <svg class="h-12 w-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m-8-8h16m-8-8a4 4 0 00-4 4h16a4 4 0 00-4-4"></path>
-            </svg>
-          </div>
-          <h3 class="text-xl font-bold text-white mb-4">Fabricación de Uniformes</h3>
-          <p class="text-white">
-            Creamos uniformes de alta calidad para equipos de fútbol, con materiales duraderos y cómodos.
-          </p>
+<section class="relative py-24 overflow-hidden bg-transparent">
+  <div class="container mx-auto px-6">
+    <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-16 text-center bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text text-transparent animate-fade-in-down">
+      Nuestros Servicios
+    </h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Servicio 1: Fabricación de Uniformes -->
+      <div class="group bg-gradient-to-br from-gray-900/95 to-red-600/95 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border border-gray-700/30">
+        <div class="text-white mb-6 flex justify-center">
+          <svg class="h-12 w-12 transition-transform duration-300 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+          </svg>
         </div>
-  
-        <!-- Servicio 2: Sublimación -->
-        <div class="bg-gradient-to-br from-gray-900 to-red-500 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 transform border border-gray-200">
-          <div class="text-white mb-4">
-            <svg class="h-12 w-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m-8-8h16m-8-8a4 4 0 00-4 4h16a4 4 0 00-4-4"></path>
-            </svg>
-          </div>
-          <h3 class="text-xl font-bold text-white mb-4">Sublimación</h3>
-          <p class="text-white">
-            Técnica de impresión que garantiza colores vibrantes y diseños únicos en tus uniformes.
-          </p>
+        <h3 class="text-xl font-semibold text-white mb-4 text-center">Fabricación de Uniformes</h3>
+        <p class="text-gray-200 text-sm text-center">
+          Creamos uniformes de alta calidad para equipos de fútbol, con materiales duraderos y cómodos.
+        </p>
+      </div>
+
+      <!-- Servicio 2: Sublimación -->
+      <div class="group bg-gradient-to-br from-gray-900/95 to-red-600/95 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border border-gray-700/30">
+        <div class="text-white mb-6 flex justify-center">
+          <svg class="h-12 w-12 transition-transform duration-300 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1m0 0v3a2 2 0 01-2 2H9a2 2 0 01-2-2V5m4 0h2m8 8v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6m18 0H3m18 0a2 2 0 002-2V9a2 2 0 00-2-2H3a2 2 0 00-2 2v2a2 2 0 002 2"></path>
+          </svg>
         </div>
-  
-        <!-- Servicio 3: Diseños Personalizados -->
-        <div class="bg-gradient-to-br from-gray-900 to-red-500 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 transform border border-gray-200">
-          <div class="text-white mb-4">
-            <svg class="h-12 w-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m-8-8h16m-8-8a4 4 0 00-4 4h16a4 4 0 00-4-4"></path>
-            </svg>
-          </div>
-          <h3 class="text-xl font-bold text-white mb-4">Diseños Personalizados</h3>
-          <p class="text-white">
-            Trabajamos contigo para crear diseños exclusivos que representen la identidad de tu equipo.
-          </p>
+        <h3 class="text-xl font-semibold text-white mb-4 text-center">Sublimación</h3>
+        <p class="text-gray-200 text-sm text-center">
+          Técnica de impresión que garantiza colores vibrantes y diseños únicos en tus uniformes.
+        </p>
+      </div>
+
+      <!-- Servicio 3: Diseños Personalizados -->
+      <div class="group bg-gradient-to-br from-gray-900/95 to-red-600/95 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border border-gray-700/30">
+        <div class="text-white mb-6 flex justify-center">
+          <svg class="h-12 w-12 transition-transform duration-300 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path>
+          </svg>
         </div>
-  
-        <!-- Servicio 4: Maquila de Productos -->
-        <div class="bg-gradient-to-br from-gray-900 to-red-500 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 transform border border-gray-200">
-          <div class="text-white mb-4">
-            <svg class="h-12 w-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m-8-8h16m-8-8a4 4 0 00-4 4h16a4 4 0 00-4-4"></path>
-            </svg>
-          </div>
-          <h3 class="text-xl font-bold text-white mb-4">Maquila de Productos</h3>
-          <p class="text-white">
-            Fabricamos productos personalizados bajo demanda, con altos estándares de calidad.
-          </p>
+        <h3 class="text-xl font-semibold text-white mb-4 text-center">Diseños Personalizados</h3>
+        <p class="text-gray-200 text-sm text-center">
+          Trabajamos contigo para crear diseños exclusivos que representen la identidad de tu equipo.
+        </p>
+      </div>
+
+      <!-- Servicio 4: Maquila de Productos -->
+      <div class="group bg-gradient-to-br from-gray-900/95 to-red-600/95 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border border-gray-700/30">
+        <div class="text-white mb-6 flex justify-center">
+          <svg class="h-12 w-12 transition-transform duration-300 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h-2m-12 0h-2M9 3v2m6-2v2M9 19v2m6-2v2"></path>
+          </svg>
         </div>
-  
-        <!-- Servicio 5: Dotación Industrial -->
-        <div class="bg-gradient-to-br from-gray-900 to-red-500 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 transform border border-gray-200">
-          <div class="text-white mb-4">
-            <svg class="h-12 w-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m-8-8h16m-8-8a4 4 0 00-4 4h16a4 4 0 00-4-4"></path>
-            </svg>
-          </div>
-          <h3 class="text-xl font-bold text-white mb-4">Dotación Industrial</h3>
-          <p class="text-white">
-            Uniformes y ropa de trabajo diseñados para la industria, con materiales resistentes y cómodos.
-          </p>
+        <h3 class="text-xl font-semibold text-white mb-4 text-center">Maquila de Productos</h3>
+        <p class="text-gray-200 text-sm text-center">
+          Fabricamos productos personalizados bajo demanda, con altos estándares de calidad.
+        </p>
+      </div>
+
+      <!-- Servicio 5: Dotación Industrial -->
+      <div class="group bg-gradient-to-br from-gray-900/95 to-red-600/95 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border border-gray-700/30">
+        <div class="text-white mb-6 flex justify-center">
+          <svg class="h-12 w-12 transition-transform duration-300 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
         </div>
-  
-        <!-- Servicio 6: Elementos de Uso Publicitario -->
-        <div class="bg-gradient-to-br from-gray-900 to-red-500 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 transform border border-gray-200">
-          <div class="text-white mb-4">
-            <svg class="h-12 w-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m-8-8h16m-8-8a4 4 0 00-4 4h16a4 4 0 00-4-4"></path>
-            </svg>
-          </div>
-          <h3 class="text-xl font-bold text-white mb-4">Elementos de Uso Publicitario</h3>
-          <p class="text-white">
-            Creación de elementos publicitarios personalizados para promocionar tu marca.
-          </p>
+        <h3 class="text-xl font-semibold text-white mb-4 text-center">Dotación Industrial</h3>
+        <p class="text-gray-200 text-sm text-center">
+          Uniformes y ropa de trabajo diseñados para la industria, con materiales resistentes y cómodos.
+        </p>
+      </div>
+
+      <!-- Servicio 6: Elementos de Uso Publicitario -->
+      <div class="group bg-gradient-to-br from-gray-900/95 to-red-600/95 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border border-gray-700/30">
+        <div class="text-white mb-6 flex justify-center">
+          <svg class="h-12 w-12 transition-transform duration-300 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"></path>
+          </svg>
         </div>
+        <h3 class="text-xl font-semibold text-white mb-4 text-center">Elementos Publicitarios</h3>
+        <p class="text-gray-200 text-sm text-center">
+          Creación de elementos personalizados para promocionar tu marca con estilo y calidad.
+        </p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
+<style>
+  @keyframes fade-in-down {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in-down {
+    animation: fade-in-down 1s ease-out forwards;
+  }
+</style>

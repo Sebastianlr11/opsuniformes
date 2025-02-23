@@ -278,3 +278,18 @@
   .animate-wave-3 {
     animation: wave-3 30s linear infinite;
   }
+
+  .faq-item {
+    background: linear-gradient(135deg, rgba(75, 85, 99, 0.9) 0%, rgba(31, 41, 55, 0.9) 100%);
+    transition: all 0.3s ease;
+  }
+
+  .faq-item:hover {
+    background: linear-gradient(135deg, rgba(107, 114, 128, 0.9) 0%, rgba(55, 65, 81, 0.9) 100%);
+  }
+
+  .faq-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+  }

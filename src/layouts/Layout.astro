@@ -9,54 +9,51 @@ import AnimatedBackground from '../components/AnimatedBackground.astro';
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ops Uniformes</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
   </head>
-  <body class="bg-gradient-to-br from-black to-gray-400 text-white relative min-h-screen overflow-x-hidden">
+  <body class="font-inter bg-gradient-to-br from-gray-900 via-black to-gray-800 text-white min-h-screen overflow-x-hidden relative">
     <!-- Fondo animado -->
     <AnimatedBackground />
 
-    <nav class="bg-transparent border-b border-gray-700/30 z-20 relative shadow-lg animate-fade-in-down">
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full bg-gradient-to-r from-gray-900/95 via-black/95 to-gray-900/95 border-b border-gray-700/20 z-30 shadow-xl transition-all duration-300">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-16">
           <!-- Logo -->
-          <div class="flex items-center">
-            <a href="/" class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-red-400 to-red-600 hover:from-blue-500 hover:to-indigo-500 transition-all duration-300">
+          <div class="flex-shrink-0">
+            <a href="/" class="text-3xl font-extrabold bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text text-transparent hover:from-blue-500 hover:to-indigo-500 transition-all duration-500 tracking-tight">
               Ops Uniformes
             </a>
           </div>
 
           <!-- Menú escritorio -->
-          <div class="hidden md:flex items-center space-x-6">
-            <a href="#hero" class="text-gray-300 hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 smooth-scroll">
+          <div class="hidden md:flex items-center space-x-8">
+            <a href="#hero" class="text-gray-200 hover:text-white hover:bg-gray-800/50 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 smooth-scroll">
               Inicio
             </a>
-            <a href="#about" class="text-gray-300 hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 smooth-scroll">
+            <a href="#about" class="text-gray-200 hover:text-white hover:bg-gray-800/50 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 smooth-scroll">
               Nosotros
             </a>
-            <a href="#products" class="text-gray-300 hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 smooth-scroll">
+            <a href="#products" class="text-gray-200 hover:text-white hover:bg-gray-800/50 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 smooth-scroll">
               Productos
             </a>
             <a
               href="#contact"
-              class="btn bg-gradient-to-br from-red-400 to-red-600 hover:from-blue-700 hover:to-indigo-700 text-white px-4 py-2 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-lg smooth-scroll"
+              class="bg-gradient-to-r from-red-500 to-orange-500 hover:from-blue-600 hover:to-indigo-600 text-white px-6 py-2 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-xl smooth-scroll"
             >
               Contáctanos
             </a>
           </div>
 
-          <!-- Botón hamburguesa para móvil -->
+          <!-- Botón hamburguesa -->
           <div class="md:hidden">
             <button
-              type="button"
-              class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-blue-400 transition-all duration-300"
-              data-collapse-toggle="navbar-mobile"
-              aria-controls="navbar-mobile"
-              aria-expanded="false"
+              id="mobile-menu-button"
+              class="p-2 rounded-lg text-gray-300 hover:text-white hover:bg-gray-800/50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition-all duration-300"
+              aria-label="Abrir menú"
             >
-              <span class="sr-only">Abrir menú principal</span>
-              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
               </svg>
             </button>
@@ -64,54 +61,60 @@ import AnimatedBackground from '../components/AnimatedBackground.astro';
         </div>
       </div>
 
-      <!-- Menú móvil (desplegable) -->
-      <div class="md:hidden hidden" id="navbar-mobile">
-        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gradient-to-br from-gray-900 to-gray-800 border-t border-gray-700/30">
-          <a href="#hero" class="block text-gray-300 hover:text-blue-400 px-3 py-2 rounded-md text-base font-medium transition-all duration-300 smooth-scroll">
+      <!-- Menú móvil -->
+      <div id="mobile-menu" class="md:hidden hidden absolute w-full bg-gradient-to-b from-gray-900 to-black border-t border-gray-700/20 shadow-lg">
+        <div class="px-4 pt-4 pb-6 space-y-2">
+          <a href="#hero" class="block text-gray-200 hover:text-white hover:bg-gray-800/50 px-4 py-2 rounded-lg font-medium transition-all duration-300 smooth-scroll">
             Inicio
           </a>
-          <a href="#about" class="block text-gray-300 hover:text-blue-400 px-3 py-2 rounded-md text-base font-medium transition-all duration-300 smooth-scroll">
+          <a href="#about" class="block text-gray-200 hover:text-white hover:bg-gray-800/50 px-4 py-2 rounded-lg font-medium transition-all duration-300 smooth-scroll">
             Nosotros
           </a>
-          <a href="#products" class="block text-gray-300 hover:text-blue-400 px-3 py-2 rounded-md text-base font-medium transition-all duration-300 smooth-scroll">
+          <a href="#products" class="block text-gray-200 hover:text-white hover:bg-gray-800/50 px-4 py-2 rounded-lg font-medium transition-all duration-300 smooth-scroll">
             Productos
           </a>
-          <a href="#contact" class="block text-gray-300 hover:text-blue-400 px-3 py-2 rounded-md text-base font-medium transition-all duration-300 smooth-scroll">
+          <a href="#contact" class="block text-gray-200 hover:text-white hover:bg-gray-800/50 px-4 py-2 rounded-lg font-medium transition-all duration-300 smooth-scroll">
             Contacto
           </a>
         </div>
       </div>
     </nav>
 
-    <!-- Contenido dinámico de las páginas -->
-    <div class="relative z-10">
+    <!-- Contenido principal -->
+    <main class="relative z-10 pt-20">
       <slot />
-    </div>
+    </main>
 
     <!-- Scripts -->
-    <script src="https://unpkg.com/flowbite@1.8.1/dist/flowbite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js" defer></script>
     <script>
       document.addEventListener('DOMContentLoaded', () => {
+        // Smooth scroll
         const links = document.querySelectorAll('.smooth-scroll');
         links.forEach(link => {
-          if (link) { // Verificar si el enlace existe
-            link.addEventListener('click', (e) => {
-              e.preventDefault();
-              const targetId = link.getAttribute('href')?.substring(1) || '';
-              const targetElement = document.getElementById(targetId);
-              if (targetElement) {
-                targetElement.scrollIntoView({
-                  behavior: 'smooth',
-                  block: 'start'
-                });
-              }
-              // Cerrar el menú móvil si está abierto
-              const navbarMobile = document.getElementById('navbar-mobile');
-              if (navbarMobile && !navbarMobile.classList.contains('hidden')) {
-                navbarMobile.classList.add('hidden');
-              }
-            });
-          }
+          link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetId = link.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+              targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+          });
+        });
+
+        // Mobile menu toggle
+        const menuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuButton?.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+        });
+
+        // Cerrar menú móvil al hacer clic en un enlace
+        mobileMenu?.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+          });
         });
       });
     </script>

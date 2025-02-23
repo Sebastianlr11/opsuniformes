@@ -1,16 +1,73 @@
-<section class="py-20 bg-transparent">
+---
+// src/components/Process.astro
+---
+
+<section class="relative py-24 bg-transparent overflow-hidden">
     <div class="container mx-auto px-6">
-      <h2 class="text-4xl font-bold text-white mb-12 text-center">Nuestro Proceso</h2>
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-        <!-- Paso 1 -->
-        <div class="text-center">
-          <div class="bg-red-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-            <span class="text-2xl font-bold">1</span>
+      <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-16 text-center bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text text-transparent animate-fade-in-down">
+        Nuestro Proceso
+      </h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Paso 1: Consulta -->
+        <div class="text-center group">
+          <div class="bg-gradient-to-br from-red-500 to-orange-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg transition-all duration-300 group-hover:scale-110 group-hover:shadow-xl">
+            <span class="text-2xl font-bold text-white">1</span>
           </div>
-          <h3 class="text-xl font-bold text-white mb-2">Consulta</h3>
-          <p class="text-gray-300">Nos cuentas tus necesidades y preferencias.</p>
+          <h3 class="text-xl font-semibold text-white mb-3">Consulta</h3>
+          <p class="text-gray-200 text-sm max-w-xs mx-auto">
+            Nos cuentas tus necesidades, preferencias y visión para el diseño.
+          </p>
         </div>
-        <!-- Agrega más pasos aquí... -->
+  
+        <!-- Paso 2: Diseño -->
+        <div class="text-center group">
+          <div class="bg-gradient-to-br from-red-500 to-orange-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg transition-all duration-300 group-hover:scale-110 group-hover:shadow-xl">
+            <span class="text-2xl font-bold text-white">2</span>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-3">Diseño</h3>
+          <p class="text-gray-200 text-sm max-w-xs mx-auto">
+            Creamos propuestas personalizadas basadas en tus ideas.
+          </p>
+        </div>
+  
+        <!-- Paso 3: Producción -->
+        <div class="text-center group">
+          <div class="bg-gradient-to-br from-red-500 to-orange-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg transition-all duration-300 group-hover:scale-110 group-hover:shadow-xl">
+            <span class="text-2xl font-bold text-white">3</span>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-3">Producción</h3>
+          <p class="text-gray-200 text-sm max-w-xs mx-auto">
+            Fabricamos tus uniformes con materiales de alta calidad.
+          </p>
+        </div>
+  
+        <!-- Paso 4: Entrega -->
+        <div class="text-center group">
+          <div class="bg-gradient-to-br from-red-500 to-orange-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg transition-all duration-300 group-hover:scale-110 group-hover:shadow-xl">
+            <span class="text-2xl font-bold text-white">4</span>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-3">Entrega</h3>
+          <p class="text-gray-200 text-sm max-w-xs mx-auto">
+            Enviamos tus productos listos para usar, a tiempo y en perfectas condiciones.
+          </p>
+        </div>
       </div>
     </div>
   </section>
+  
+  <style>
+    @keyframes fade-in-down {
+      0% {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  
+    .animate-fade-in-down {
+      animation: fade-in-down 1s ease-out forwards;
+    }
+  </style>

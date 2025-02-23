@@ -2,22 +2,57 @@
 // src/components/Hero.astro
 ---
 
-<section class="relative py-30 overflow-hidden bg-transparent">
-    <!-- Imagen de fondo -->
-    <div class="absolute inset-0 bg-[url('/images/hero-football.jpg')] bg-cover bg-center opacity-20"></div>
-    
-    <div class="container mx-auto px-6 text-center relative z-10 py-40">
-      <h1 class="text-5xl md:text-6xl font-bold text-white mb-6 animate-fade-in-down">
-        Uniformes de Fútbol Personalizados
-      </h1>
-      <p class="text-xl text-gray-200 max-w-2xl mx-auto mb-8 animate-fade-in-up">
-        Diseña y fabrica los uniformes de tu equipo con nuestros servicios de sublimación y personalización.
-      </p>
-      <a
-        href="#servicios"
-        class="mt-6 inline-block bg-white text-red-400 px-8 py-3 rounded-lg hover:bg-gray-400 hover:scale-105 transition-all duration-300 animate-fade-in-up"
-      >
-        Ver Servicios
-      </a>
-    </div>
-  </section>
+<section class="relative min-h-screen flex items-center overflow-hidden bg-transparent">
+  <!-- Imagen de fondo -->
+  <div class="absolute inset-0 bg-[url('/images/hero-football.jpg')] bg-cover bg-center opacity-30"></div>
+  <!-- Overlay -->
+  <div class="absolute inset-0 bg-gradient-to-b from-gray-900/80 via-black/60 to-gray-900/80"></div>
+
+  <div class="container mx-auto px-6 text-center relative z-10 py-20">
+    <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6 bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text text-transparent animate-fade-in-down tracking-tight">
+      Uniformes de Fútbol Personalizados
+    </h1>
+    <p class="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto mb-10 animate-fade-in-up leading-relaxed">
+      Diseña y fabrica los uniformes de tu equipo con nuestros servicios de sublimación y personalización de alta calidad.
+    </p>
+    <a
+      href="#servicios"
+      class="inline-block bg-gradient-to-r from-red-500 to-orange-500 text-white px-8 py-4 rounded-full font-semibold text-lg hover:from-blue-600 hover:to-indigo-600 transition-all duration-300 transform hover:scale-105 hover:shadow-xl animate-fade-in-up smooth-scroll"
+    >
+      Ver Servicios
+    </a>
+  </div>
+</section>
+
+<style>
+  @keyframes fade-in-down {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fade-in-up {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in-down {
+    animation: fade-in-down 1s ease-out forwards;
+  }
+
+  .animate-fade-in-up {
+    animation: fade-in-up 1s ease-out forwards;
+    animation-delay: 0.3s;
+  }
+</style>
