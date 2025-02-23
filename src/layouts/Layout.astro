@@ -35,7 +35,7 @@ import AnimatedBackground from '../components/AnimatedBackground.astro';
             <a href="#about" class="text-gray-200 hover:text-white hover:bg-gray-800/50 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 smooth-scroll">
               Nosotros
             </a>
-            <a href="#products" class="text-gray-200 hover:text-white hover:bg-gray-800/50 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 smooth-scroll">
+            <a href="/products" class="text-gray-200 hover:text-white hover:bg-gray-800/50 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300">
               Productos
             </a>
             <a
@@ -70,7 +70,7 @@ import AnimatedBackground from '../components/AnimatedBackground.astro';
           <a href="#about" class="block text-gray-200 hover:text-white hover:bg-gray-800/50 px-4 py-2 rounded-lg font-medium transition-all duration-300 smooth-scroll">
             Nosotros
           </a>
-          <a href="#products" class="block text-gray-200 hover:text-white hover:bg-gray-800/50 px-4 py-2 rounded-lg font-medium transition-all duration-300 smooth-scroll">
+          <a href="/products" class="block text-gray-200 hover:text-white hover:bg-gray-800/50 px-4 py-2 rounded-lg font-medium transition-all duration-300">
             Productos
           </a>
           <a href="#contact" class="block text-gray-200 hover:text-white hover:bg-gray-800/50 px-4 py-2 rounded-lg font-medium transition-all duration-300 smooth-scroll">
@@ -89,16 +89,26 @@ import AnimatedBackground from '../components/AnimatedBackground.astro';
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js" defer></script>
     <script>
       document.addEventListener('DOMContentLoaded', () => {
-        // Smooth scroll
+        // Smooth scroll para anclas dentro de la misma página
         const links = document.querySelectorAll('.smooth-scroll');
         links.forEach(link => {
           link.addEventListener('click', (e) => {
-            e.preventDefault();
-            const targetId = link.getAttribute('href').substring(1);
-            const targetElement = document.getElementById(targetId);
-            if (targetElement) {
-              targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            const href = link.getAttribute('href');
+            // Si es una ancla (#id), usa smooth scroll
+            if (href.startsWith('#')) {
+              e.preventDefault();
+              const targetId = href.substring(1);
+              const targetElement = document.getElementById(targetId);
+              if (targetElement) {
+                targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              }
+              // Cerrar menú móvil si está abierto
+              const mobileMenu = document.getElementById('mobile-menu');
+              if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.add('hidden');
+              }
             }
+            // Si es una ruta absoluta como /products, permite la navegación normal
           });
         });
 

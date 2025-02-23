@@ -1,0 +1,72 @@
+[
+    {
+      "id": 1,
+      "title": "Uniforme 1",
+      "description": "Diseño único para el uniforme 1, fabricado con materiales de alta calidad.",
+      "image": "/diseño1.png",
+      "price": "89.99"
+    },
+    {
+      "id": 2,
+      "title": "Uniforme 2",
+      "description": "Diseño moderno y elegante para el uniforme 2, ideal para equipos profesionales.",
+      "image": "/diseño2.png",
+      "price": "99.99"
+    },
+    {
+      "id": 3,
+      "title": "Uniforme 3",
+      "description": "Uniforme 3 con colores vibrantes y diseño personalizado.",
+      "image": "diseño3.png",
+      "price": "79.99"
+    },
+    {
+      "id": 4,
+      "title": "Uniforme 4",
+      "description": "Diseño clásico para el uniforme 4, perfecto para equipos juveniles.",
+      "image": "/images/uniforme-1.jpg",
+      "price": "69.99"
+    },
+    {
+      "id": 5,
+      "title": "Uniforme 5",
+      "description": "Uniforme 5 con tecnología de transpirabilidad avanzada.",
+      "image": "/images/uniforme-2.jpg",
+      "price": "109.99"
+    },
+    {
+      "id": 6,
+      "title": "Uniforme 6",
+      "description": "Diseño exclusivo para el uniforme 6, con detalles en dorado.",
+      "image": "/images/uniforme-3.jpg",
+      "price": "119.99"
+    },
+    {
+      "id": 7,
+      "title": "Uniforme 7",
+      "description": "Uniforme 7 con materiales resistentes y cómodos.",
+      "image": "/images/uniforme-1.jpg",
+      "price": "89.99"
+    },
+    {
+      "id": 8,
+      "title": "Uniforme 8",
+      "description": "Diseño moderno para el uniforme 8, ideal para competiciones.",
+      "image": "/images/uniforme-2.jpg",
+      "price": "99.99"
+    },
+    {
+      "id": 9,
+      "title": "Uniforme 9",
+      "description": "Uniforme 9 con colores vibrantes y diseño personalizado.",
+      "image": "/images/uniforme-3.jpg",
+      "price": "79.99"
+    },
+    {
+      "id": 10,
+      "title": "Uniforme 10",
+      "description": "Diseño clásico para el uniforme 10, perfecto para equipos juveniles.",
+      "image": "/images/uniforme-1.jpg",
+      "price": "69.99"
+    }
+  ]

@@ -1,0 +1,80 @@
+---
+// src/pages/products.astro
+import Layout from '../layouts/Layout.astro';
+import productsData from '../data/products.json'; // Importa el archivo JSON
+
+// Configuración de paginación
+const itemsPerPage = 12;
+const currentPage = Astro.url.searchParams.get('page') ? parseInt(Astro.url.searchParams.get('page')) : 1;
+const totalPages = Math.ceil(productsData.length / itemsPerPage);
+const startIndex = (currentPage - 1) * itemsPerPage;
+const paginatedProducts = productsData.slice(startIndex, startIndex + itemsPerPage);
+---
+
+<Layout>
+  <section class="relative py-24 bg-transparent overflow-hidden" id="products">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-16 text-center bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text text-transparent animate-fade-in-down">
+        Nuestros Productos
+      </h2>
+
+      <!-- Grid de productos -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        {paginatedProducts.map(product => (
+          <div class="group bg-gradient-to-br from-gray-900/95 to-red-600/95 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border border-gray-700/30">
+            <div class="overflow-hidden rounded-lg mb-6">
+              <img
+                src={product.image}
+                alt={product.title}
+                class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+            </div>
+            <h3 class="text-xl font-semibold text-white mb-3">{product.title}</h3>
+            <p class="text-gray-200 text-sm mb-4">{product.description}</p>
+            <p class="text-white font-bold text-lg">${product.price}</p>
+          </div>
+        ))}
+      </div>
+
+      <!-- Paginación -->
+      <div class="flex justify-center items-center gap-4">
+        {currentPage > 1 && (
+          <a
+            href={`/products?page=${currentPage - 1}`}
+            class="bg-gradient-to-r from-red-500 to-orange-500 text-white px-4 py-2 rounded-full hover:from-blue-600 hover:to-indigo-600 transition-all duration-300"
+          >
+            Anterior
+          </a>
+        )}
+        <span class="text-gray-200">
+          Página {currentPage} de {totalPages}
+        </span>
+        {currentPage < totalPages && (
+          <a
+            href={`/products?page=${currentPage + 1}`}
+            class="bg-gradient-to-r from-red-500 to-orange-500 text-white px-4 py-2 rounded-full hover:from-blue-600 hover:to-indigo-600 transition-all duration-300"
+          >
+            Siguiente
+          </a>
+        )}
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  @keyframes fade-in-down {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in-down {
+    animation: fade-in-down 1s ease-out forwards;
+  }
+</style>
