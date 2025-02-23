@@ -3,7 +3,7 @@
       "id": 1,
       "title": "Fabricación de Uniformes",
       "description": "Creamos uniformes de alta calidad para equipos de fútbol, con materiales duraderos y cómodos. Nuestros uniformes están diseñados para maximizar el rendimiento y la comodidad de los jugadores.",
-      "image": "nosotros.jpg",
+      "image": "/nosotros.jpg",
       "benefits": [
         "Materiales resistentes y transpirables.",
         "Diseños personalizados según tus necesidades.",
@@ -14,7 +14,7 @@
       "id": 2,
       "title": "Sublimación",
       "description": "Utilizamos técnicas de sublimación de última generación para garantizar colores vibrantes y diseños únicos en tus uniformes. Perfecto para equipos que buscan destacar.",
-      "image": "nosotros.jpg",
+      "image": "/nosotros.jpg",
       "benefits": [
         "Colores que no se desvanecen con el tiempo.",
         "Durabilidad y resistencia al lavado.",
