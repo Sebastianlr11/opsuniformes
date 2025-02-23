@@ -1,0 +1,59 @@
+---
+// src/components/Gallery.astro
+---
+
+<section class="relative py-20 overflow-hidden">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold text-white mb-12 text-center">
+        Nuestros Diseños
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Ejemplo de diseño 1 -->
+        <div class="bg-gradient-to-br from-gray-900 to-red-500 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 transform border border-gray-200">
+          <a href="/images/uniforme-1.jpg" data-lightbox="gallery" data-title="Equipo Los Tigres">
+            <img
+              src="/diseño1.png"
+              alt="Uniforme de Fútbol"
+              class="w-55 h-70 object-cover rounded-lg mb-4 ml-10"
+            />
+          </a>
+          <h3 class="text-xl font-bold text-white mb-4">Equipo Los Tigres</h3>
+          <p class="text-white">
+            Uniforme personalizado con colores vibrantes y diseño único.
+          </p>
+        </div>
+
+        <!-- Ejemplo de diseño 2 -->
+        <div class="bg-gradient-to-br from-gray-900 to-red-500 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 transform border border-gray-200">
+          <a href="/images/uniforme-2.jpg" data-lightbox="gallery" data-title="Equipo Águilas">
+            <img
+              src="/diseño2.png"
+              alt="Uniforme de Fútbol"
+              class="w-68 h-65 object-cover rounded-lg mb-8 ml-6 "
+            />
+          </a>
+          <h3 class="text-xl font-bold text-white mb-4">Equipo Águilas</h3>
+          <p class="text-white">
+            Diseño moderno con detalles en dorado y azul.
+          </p>
+        </div>
+
+        <!-- Ejemplo de diseño 3 -->
+        <div class="bg-gradient-to-br from-gray-900 to-red-500 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 transform border border-gray-200">
+          <a href="/images/uniforme-3.jpg" data-lightbox="gallery" data-title="Equipo Leones">
+            <img
+              src="/diseño3.png"
+              alt="Uniforme de Fútbol"
+              class="w-68 h-68 object-cover rounded-lg mb-4 ml-6"
+            />
+          </a>
+          <h3 class="text-xl font-bold text-white mb-4">Equipo Leones</h3>
+          <p class="text-white">
+            Uniforme clásico con toques modernos y elegantes.
+          </p>
+        </div>
+
+        <!-- Puedes agregar más diseños aquí... -->
+      </div>
+    </div>
+  </section>
